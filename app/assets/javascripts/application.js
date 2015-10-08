@@ -20,6 +20,26 @@
 
 
 $(document).ready(function(){
-    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
     $('.modal-trigger').leanModal();
   });
+
+$(document).ready(function ($) {
+
+  $('#close-but').click(function () {
+    console.log("hello")
+    // $('.section').removeClass('expand');
+  });
+
+  var clicks = 0
+  $('.section').click(function () {
+    $(this).addClass('expand');
+    clicks += 1
+
+    var btn = $("<a class='waves-effect waves-light pink btn right' id='close-but'>Close</a>");
+
+    if(clicks == 1){
+      $(this).append(btn);
+    }
+  });
+
+});
