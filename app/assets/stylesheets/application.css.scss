@@ -1,0 +1,42 @@
+@import "materialize/components/color";
+$primary-color: color("pink", "darken-3") !default;
+@import 'materialize';
+
+
+body {
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+ }
+ main {
+   flex: 1 0 auto;
+ }
+ .idea{
+   max-height: 250px;
+ }
+ .idea-container{
+   margin: 0px !important;
+ }
+
+ *, *:before, *:after {box-sizing:  border-box !important;}
+
+
+ .article {
+  -moz-column-width: 13em;
+  -webkit-column-width: 13em;
+  -moz-column-gap: 1em;
+  -webkit-column-gap: 1em;
+
+ }
+
+ .section {
+  display: inline-block;
+  margin:  0.5rem;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  width:  100%;
+  background:  #efefef;
+ }
+ .card-content{
+   overflow: hidden !important;
+ }

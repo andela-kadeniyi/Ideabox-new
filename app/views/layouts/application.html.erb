@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IdeaBox</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <main>
+    <%= render partial: 'layouts/nav' %>
+    <div style="margin: 0px 40px;">
+      <%= yield %>
+    </div>
+  </main>
+
+  <footer class="page-footer">
+    <!-- <div class="container"> -->
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">About this app</h5>
+          <p class="grey-text text-lighten-4">This is simply an ideabox usign React and Rails </p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Quick Links</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="/">Home</a></li>
+
+          </ul>
+        </div>
+      </div>
+    <!-- </div> -->
+    <div class="footer-copyright">
+      <div class="container">
+      © <%= Time.now.to_date.year%> Copyright Text
+      <scan class="grey-text text-lighten-4 right">Made with &#128151 from <a href="andela.com">Andela</a></scan>
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+</html>

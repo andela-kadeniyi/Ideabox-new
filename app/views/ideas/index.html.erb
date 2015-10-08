@@ -1,0 +1,16 @@
+<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+  <a class="btn-floating btn-large pink lighten-1 modal-trigger" data-target="modal1">
+    <i class="large material-icons">add</i>
+  </a>
+</div>
+
+<%= react_component 'Ideas', { data: @ideas } %>
+
+<div id="modal1" class="modal bottom-sheet">
+    <div class="modal-content">
+      <%= render partial: "ideaform"%>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect teal white-text waves-teal btn-flat">Add Idea</a>
+    </div>
+  </div>
