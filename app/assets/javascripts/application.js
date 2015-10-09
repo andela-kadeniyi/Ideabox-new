@@ -17,26 +17,30 @@
 //= require react_ujs
 //= require components
 //= require_tree .
-
+var clicks = 0
 
 $(document).ready(function(){
     $('.modal-trigger').leanModal();
   });
 
+$(document).on("click","#close-but", function (e) {
+  $('.section').removeClass('expand');
+  $('.section').addClass('a');
+  $('.section').css('height', 'auto');
+  $('.modal-trigger').css('display', 'block')
+  clicks = 0
+});
+
 $(document).ready(function ($) {
+  $('body').css('background-color', 'rgba(100,100,100,1)')
 
-  $('#close-but').click(function () {
-    console.log("hello")
-    // $('.section').removeClass('expand');
-  });
-
-  var clicks = 0
   $('.section').click(function () {
     $(this).addClass('expand');
+    $(this).removeClass('a');
+    $(this).height(0.9 * $(window).height())
+    $('.modal-trigger').css('display', 'none')
     clicks += 1
-
-    var btn = $("<a class='waves-effect waves-light pink btn right' id='close-but'>Close</a>");
-
+    var btn = $("<a class='waves-effect waves-light pink btn btn-floating center' id='close-but'><i class='large material-icons'>close</i></a>");
     if(clicks == 1){
       $(this).append(btn);
     }
