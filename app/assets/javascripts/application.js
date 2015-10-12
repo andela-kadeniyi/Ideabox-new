@@ -29,6 +29,7 @@ $(document).on("click","#close-but", function (e) {
   $('.section').css('height', 'auto');
   $('.modal-trigger').css('display', 'block')
   clicks = 0
+  $(this).remove()
 });
 
 $(document).ready(function ($) {
